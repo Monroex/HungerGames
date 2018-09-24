@@ -51,7 +51,7 @@ def shuffle(xs):
     return [x for (_, x) in tmp]
 
 def positions():
-    # Returns a list of 2-tuples with all positions on a n by m grid.
+    # Returns a list of 2-tuples with all positions on a 5x5 grid.
     # 
     # Side effects: None
     
@@ -72,7 +72,7 @@ def bang(delay):
     display.clear()
     
 def random_positions(n):
-    # Creates a set with n random points (x, y).
+    # Creates a set with n random points (x, y) on a 5x5 grid.
     #
     # Argument(s):
     #  n (integer) - Number of point to create.
