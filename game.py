@@ -136,10 +136,9 @@ def eat(hero, food, bomblist):
     if hero in food:
        food.remove(hero)
 
-    if hero in bomblist:
-        boom()
+    if hero in bomblist and food:
         food = []
-        bomblist = []
+        boom()
     
     
     return (food, bomblist)
@@ -214,7 +213,7 @@ def spawn_hero_and_food(n):
     # First we generate n + 1 random positions:
     # n for the food and one for the hero all in set s.
     s = random_positions(n+1)
-    
+    bomblist = []
     for x in range(2):
         bomblist.append(s.pop())
     # Take out an arbitrary element from the set s
@@ -247,7 +246,6 @@ def spawn(n):
 
     show(food, bomblist)
     # Light up all food positions on the display.
-
     return (hero, food, bomblist)
 
 ######################
